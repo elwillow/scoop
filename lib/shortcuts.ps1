@@ -19,9 +19,9 @@ function create_startmenu_shortcuts($manifest, $dir, $global, $arch) {
 }
 
 function shortcut_folder($global) {
-    $directory = [System.IO.Path]::Combine([Environment]::GetFolderPath('startmenu'), 'Programs', 'Scoop Apps')
+    $directory = [System.IO.Path]::Combine([Environment]::GetFolderPath('startmenu'), 'Programs')
     if($global) {
-        $directory = [System.IO.Path]::Combine([Environment]::GetFolderPath('commonstartmenu'), 'Programs', 'Scoop Apps')
+        $directory = [System.IO.Path]::Combine([Environment]::GetFolderPath('commonstartmenu'), 'Programs')
     }
     return $(ensure $directory)
 }
